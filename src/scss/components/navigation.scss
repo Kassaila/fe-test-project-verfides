@@ -1,0 +1,102 @@
+.nav {
+  margin-left: auto;
+  @include media('<desktop') {
+    background-color: map-get($colors, 'white');
+    padding: 45px 95px;
+    margin-left: 0;
+  }
+  &__list {
+    @extend %listreset;
+    display: flex;
+    @include media('<desktop') {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      display: none;
+      background-color: #043355;
+      padding: 10px 0;
+    }
+    li {
+      margin-left: 47px;
+      @include media('<widescreen') {
+        margin-left: 20px;
+      }
+      @include media('<desktop') {
+        margin-left: 0;
+      }
+    }
+  }
+  &__link {
+    @include animate(all);
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: map-get($colors, 'white');
+    border-bottom: 1px solid transparent;
+    padding: 6px 0 10px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: map-get($colors, 'blue');
+    }
+    @include media('<desktop') {
+      text-align: center;
+    }
+    &_current {
+      border-color: map-get($colors, 'white');
+      &:hover,
+      &:focus {
+        border-color: map-get($colors, 'blue');
+      }
+    }
+  }
+  &__btn-mobile {
+    @extend %btnreset;
+    display: none;
+    @include media('<desktop') {
+      position: relative;
+      width: 50px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before,
+      &:after {
+        @include animate(all);
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #444;
+        border-radius: 2px;
+        transform-origin: 0;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+    span {
+      @include animate(all);
+      width: 100%;
+      height: 4px;
+      background-color: #444;
+      border-radius: 2px;
+    }
+    &_active {
+      &:before {
+        transform: rotateZ(24deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &:after {
+        transform: rotateZ(-24deg);
+      }
+    }
+  }
+}
