@@ -3,7 +3,7 @@ const navMobile = () => {
   const $navButton = $('.nav__btn-mobile');
   const ACTIVE_CLASS = 'nav__btn-mobile_active';
 
-  const init = () => {
+  function _addEventListeners() {
     $navButton.on('click', () => {
       if (!$navButton.hasClass(ACTIVE_CLASS)) {
         $navButton.addClass(ACTIVE_CLASS);
@@ -14,6 +14,10 @@ const navMobile = () => {
       }
       return true;
     });
+  }
+
+  const init = () => {
+    _addEventListeners();
   };
 
   return {

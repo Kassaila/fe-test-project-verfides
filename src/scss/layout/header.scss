@@ -17,10 +17,8 @@
   &__logo {
     width: 173px;
     @include media('<desktop') {
+      width: 85px;
       margin: 0 auto;
-    }
-    @include media('<phone') {
-      width: 120px;
     }
   }
 }

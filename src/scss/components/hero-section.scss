@@ -52,7 +52,7 @@
       opacity: 0.8;
     }
     &:before {
-      @include animate(border, 0.3s, ease);
+      @include animate(border);
       content: '';
       position: absolute;
       right: 0;
@@ -89,9 +89,6 @@
     max-width: 500px;
     color: map-get($colors, 'white');
     margin: auto 0;
-    @include media('<tablet') {
-      max-width: 560px;
-    }
     &:after {
       background-color: map-get($colors, 'white');
     }
@@ -118,11 +115,9 @@
       background-color: transparent;
       border: 1px solid map-get($colors, 'white');
     }
-    @include media('<tablet') {
-      width: 75px;
-      height: 75px;
-    }
     @include media('<phone') {
+      width: 38px;
+      height: 38px;
       margin: 0 0 40px;
     }
 
@@ -130,6 +125,9 @@
       font-size: 30px;
       color: map-get($colors, 'white');
       transform: rotateZ(90deg);
+      @include media('<phone') {
+        font-size: 24px;
+      }
     }
   }
 }

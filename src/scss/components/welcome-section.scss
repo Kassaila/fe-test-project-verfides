@@ -2,7 +2,7 @@
   border-bottom: 1px solid #a5a5a5;
   padding: 70px 0 95px;
   @include media('<phone') {
-    padding: 50px 0;
+    padding: 35px 0;
   }
 
   &__container {
@@ -18,28 +18,20 @@
     font: 18px/1.2 map-get($base, 'base-font-family');
     text-align: center;
     margin: 37px 0 0;
-    @include media('<tablet') {
-      font-size: 28px;
-    }
     @include media('<phone') {
-      font-size: 22px;
-      line-height: 1.4;
-      margin: 25px 0 0;
+      font-size: 14px;
+      margin: 18px 0 0;
     }
   }
   &__content {
     column-count: 2;
     column-gap: 25px;
     margin: 33px 0 0;
-    @include media('<tablet') {
-      column-count: 1;
-      font-size: 24px;
-      line-height: 1.25;
-    }
     @include media('<phone') {
-      margin: 20px 0 0;
-      font-size: 16px;
-      line-height: 1.4;
+      column-count: 1;
+      font-size: 12px;
+      line-height: 1.25;
+      margin: 16px 0 0;
     }
     p {
       margin-bottom: 20px;
