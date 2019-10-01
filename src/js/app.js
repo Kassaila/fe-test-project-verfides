@@ -4,10 +4,12 @@
 // Feel free with using ES6 here.
 
 import navMobile from './modules/nav-mobile';
+import bgVideoControl from './modules/bg-video-control';
 
 (($) => {
   // When DOM is ready
   $(() => {
     navMobile.init();
+    bgVideoControl.init();
   });
 })(jQuery);

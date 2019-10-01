@@ -43,23 +43,14 @@
     &:hover,
     &:focus {
       text-decoration: none;
-      color: map-get($colors, 'blue');
-      @include media('<desktop') {
-        color: map-get($colors, 'white');
-      }
+      border-color: map-get($colors, 'white');
+      opacity: 0.8;
     }
     @include media('<desktop') {
       text-align: center;
     }
     &_current {
       border-color: map-get($colors, 'white');
-      &:hover,
-      &:focus {
-        border-color: map-get($colors, 'blue');
-        @include media('<desktop') {
-          border-color: map-get($colors, 'white');
-        }
-      }
     }
   }
 
