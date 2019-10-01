@@ -1,0 +1,59 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .section-title {
+    max-width: 500px;
+    color: map-get($colors, 'white');
+    margin: auto 0;
+    @include media('<tablet') {
+      max-width: 560px;
+    }
+    &:after {
+      background-color: map-get($colors, 'white');
+    }
+  }
+  &__btn_scroll-to {
+    @extend %btnreset;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin: 0 0 80px;
+    &:hover:before {
+      transform: rotateZ(90deg);
+    }
+    &:before {
+      @include animate(all);
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 1px solid map-get($colors, 'white');
+    }
+    @include media('<tablet') {
+      width: 75px;
+      height: 75px;
+    }
+    @include media('<phone') {
+      margin: 0 0 40px;
+    }
+
+    .icon-arrow-long {
+      font-size: 30px;
+      color: map-get($colors, 'white');
+      transform: rotateZ(90deg);
+    }
+  }
+}

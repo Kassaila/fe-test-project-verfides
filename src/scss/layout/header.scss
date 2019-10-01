@@ -1,8 +1,12 @@
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 30px 60px 30px 40px;
+  z-index: 10;
   @include media('<widescreen') {
     padding: 30px 15px;
   }

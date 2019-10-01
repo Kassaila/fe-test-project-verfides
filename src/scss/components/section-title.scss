@@ -17,4 +17,7 @@
   @include media('<tablet') {
     font-size: 46px;
   }
+  @include media('<phone') {
+    font-size: 30px;
+  }
 }
