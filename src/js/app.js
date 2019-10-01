@@ -5,11 +5,13 @@
 
 import navMobile from './modules/nav-mobile';
 import bgVideoControl from './modules/bg-video-control';
+import navScroll from './modules/nav-scroll';
 
 (($) => {
   // When DOM is ready
   $(() => {
     navMobile.init();
     bgVideoControl.init();
+    navScroll.scrollTo();
   });
 })(jQuery);
