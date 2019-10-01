@@ -1,17 +1,24 @@
 const bgVideoControl = () => {
   const $video = $('.hero-section__background video')[0];
   const $btn = $('.hero-section__btn-control');
+  const BTN_TEXT_PAUSE = $btn.attr('data-text-pause');
+  const BTN_TEXT_PLAY = $btn.attr('data-text-play');
+  const BTN_CLASS_PAUSED = 'hero-section__btn-control_paused';
 
-  const init = () => {
+  function _addEventListeners() {
     $btn.on('click', () => {
       if ($video.paused) {
         $video.play();
-        $btn.toggleClass('hero-section__btn-control_paused').text('Pause');
+        $btn.toggleClass(BTN_CLASS_PAUSED).text(BTN_TEXT_PAUSE);
       } else {
         $video.pause();
-        $btn.toggleClass('hero-section__btn-control_paused').text('Play');
+        $btn.toggleClass(BTN_CLASS_PAUSED).text(BTN_TEXT_PLAY);
       }
     });
+  }
+
+  const init = () => {
+    _addEventListeners();
   };
 
   return {

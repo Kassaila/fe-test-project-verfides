@@ -1,12 +1,13 @@
 <section class="hero-section">
   <div class="hero-section__background">
-    <video playsinline="true" muted="true" autoplay="true" loop="true" poster="/assets/images/hero-img-1920.jpg">
+    <video playsinline muted autoplay loop>
       <source src="/assets/video/miami-city.mp4" type="video/mp4">
     </video>
     <picture>
+      <source srcset="/assets/images/hero-img-1920.jpg" media="(min-width: 768px)">
       <img src="/assets/images/hero-img-768.jpg" alt="">
     </picture>
-    <button class="hero-section__btn-control" type="button">Pause</button>
+    <button class="hero-section__btn-control" data-text-pause="Pause" data-text-play="Play" type="button">Pause</button>
   </div>
   <div class="hero-section__container">
     <h1 class="section-title">Wealth structuring, preservation and protection.</h1>

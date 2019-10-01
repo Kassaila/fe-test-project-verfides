@@ -1,5 +1,5 @@
 const navScroll = () => {
-  const $scrollClass = $('.scroll-hero-section__btn_scroll-to');
+  const $scrollClass = $('.hero-section__btn_scroll-to');
   const scrollDelay = 300;
   const $win = $(window);
 
@@ -24,8 +24,8 @@ const navScroll = () => {
   };
 
   const scrollTo = () => {
-    $scrollClass.on('click', (e) => {
-      const anchorId = $(e.target).attr('data-anchor');
+    $scrollClass.on('click', function () {
+      const anchorId = $(this).attr('data-anchor');
 
       if (!anchorId) return false;
 

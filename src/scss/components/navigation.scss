@@ -33,7 +33,7 @@
   }
 
   &__link {
-    @include animate(all);
+    @include animate(border-color opacity);
     position: relative;
     display: block;
     font-size: 18px;
@@ -49,6 +49,13 @@
     @include media('<desktop') {
       text-align: center;
     }
+    @include media('<tablet') {
+      font-size: 28px;
+    }
+    @include media('<phone') {
+      font-size: 22px;
+    }
+
     &_current {
       border-color: map-get($colors, 'white');
     }

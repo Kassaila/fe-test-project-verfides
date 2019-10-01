@@ -28,13 +28,14 @@
       }
     }
     img {
-      display: none;
-      @include media('<tablet') {
-        display: block;
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-      }
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
   }
   &__btn-control {
@@ -51,7 +52,7 @@
       opacity: 0.8;
     }
     &:before {
-      @include animate(all, 0.3s, ease);
+      @include animate(border, 0.3s, ease);
       content: '';
       position: absolute;
       right: 0;
@@ -109,7 +110,7 @@
       transform: rotateZ(90deg);
     }
     &:before {
-      @include animate(all, 0.5s, ease);
+      @include animate(transform, 0.5s, ease);
       content: '';
       position: absolute;
       width: 100%;

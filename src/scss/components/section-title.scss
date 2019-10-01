@@ -2,7 +2,7 @@
   position: relative;
   font: 300 italic 36px/1.2 map-get($base, 'base-font-family');
   text-align: center;
-  padding: 0 0 30px;
+  padding: 0 0 32px;
   margin: 0;
   &:after {
     content: '';
@@ -14,10 +14,7 @@
     background-color: #769eca;
     transform: translateX(-50%);
   }
-  @include media('<tablet') {
-    font-size: 46px;
-  }
   @include media('<phone') {
-    font-size: 30px;
+    font-size: 23px;
   }
 }
