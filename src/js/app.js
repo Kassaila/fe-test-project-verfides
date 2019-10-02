@@ -15,5 +15,6 @@ import servicesSlider from './modules/services-slider';
     bgVideoControl.init();
     navScroll.scrollTo();
     servicesSlider.init();
+    $('.picture-section').offset().top;
   });
 })(jQuery);

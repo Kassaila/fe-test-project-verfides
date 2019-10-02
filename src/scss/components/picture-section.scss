@@ -1,0 +1,13 @@
+.screen {
+  height: 100vh;
+}
+.picture-section {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+
+  &__image-parallax {
+    position: absolute;
+    width: 100%;
+  }
+}
