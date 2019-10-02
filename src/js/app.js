@@ -6,6 +6,7 @@
 import navMobile from './modules/nav-mobile';
 import bgVideoControl from './modules/bg-video-control';
 import navScroll from './modules/nav-scroll';
+import servicesSlider from './modules/services-slider';
 
 (($) => {
   // When DOM is ready
@@ -13,5 +14,6 @@ import navScroll from './modules/nav-scroll';
     navMobile.init();
     bgVideoControl.init();
     navScroll.scrollTo();
+    servicesSlider.init();
   });
 })(jQuery);

@@ -1,0 +1,137 @@
+.services-section {
+  padding: 90px 0 75px;
+  @include media('<phone') {
+    padding: 35px 0 40px;
+  }
+  &__container {
+    max-width: 1000px;
+    margin: 65px auto 0;
+    @include media('<phone') {
+      margin: 20px auto 0;
+    }
+  }
+  &__slider {
+    padding: 0 70px;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 72px;
+      height: 100%;
+      z-index: 2;
+      @include media('<phone') {
+        display: none;
+      }
+    }
+    &:before {
+      left: 0;
+      background: linear-gradient(90deg, #fff 0%, transparent 100%);
+    }
+    &:after {
+      right: 0;
+      background: linear-gradient(90deg, transparent 0%, #fff 100%);
+    }
+    .swiper-wrapper {
+      @include media('<phone') {
+        flex-direction: column;
+      }
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include media('<phone') {
+        flex-direction: row;
+      }
+      &:not(:last-child) {
+        @include media('<phone') {
+          flex-direction: row;
+          border-bottom: 1px solid #d7d7d7;
+          padding: 0 0 10px;
+          margin: 0 0 10px;
+        }
+      }
+
+      &__icon-holder {
+        width: 110px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 0 20px;
+        @include media('<phone') {
+          min-width: 55px;
+          width: 55px;
+          height: 55px;
+          margin: 0 10px 0 0;
+        }
+
+        @each $key, $value in $bg-colors {
+          &_#{$key} {
+            background-color: $value;
+          }
+        }
+
+        &_three img {
+          position: relative;
+          top: 5px;
+          left: 5px;
+        }
+      }
+      &__text {
+        font: 18px/1.2 map-get($base, 'base-font-family');
+        text-align: center;
+        @include media('<phone') {
+          font-size: 14px;
+          text-align: left;
+        }
+      }
+    }
+    .swiper-btn {
+      position: absolute;
+      top: 65px;
+      width: 51px;
+      height: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      cursor: pointer;
+      &:hover:after {
+        box-shadow: 3px -3px 5px 1px rgba(#000, 0.2);
+      }
+      &:after {
+        @include animate(box-shadow);
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: map-get($colors, 'white');
+        border-style: solid;
+        border-color: map-get($colors, 'grey');
+        z-index: -1;
+      }
+      @include media('<phone') {
+        display: none;
+      }
+    }
+    .swiper-btn_prev {
+      left: 10px;
+      transform: translateY(-50%) rotateY(180deg);
+      &:after {
+        border-width: 0 0 1px 1px;
+        transform: rotateZ(225deg);
+      }
+    }
+    .swiper-btn_next {
+      right: 10px;
+      transform: translateY(-50%);
+      &:after {
+        border-width: 0 0 1px 1px;
+        transform: rotateZ(225deg);
+      }
+    }
+  }
+}

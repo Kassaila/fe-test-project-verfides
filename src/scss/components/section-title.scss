@@ -13,6 +13,9 @@
     height: 1px;
     background-color: #769eca;
     transform: translateX(-50%);
+    @include media('<phone') {
+      width: 125px;
+    }
   }
   @include media('<phone') {
     font-size: 23px;
