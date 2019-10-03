@@ -80,9 +80,18 @@
     }
   }
   &__link {
+    position: relative;
     font-weight: 700;
+    padding-right: 20px;
     @include media('<phone') {
       font-size: 12px;
+      padding-right: 15px;
+    }
+    .icon-arrow {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
     }
   }
 }
