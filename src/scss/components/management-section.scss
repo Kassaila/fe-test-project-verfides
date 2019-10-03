@@ -1,11 +1,17 @@
 .management-section {
-  padding: 40px 0;
+  padding: 70px 0 80px;
+  @include media('<phone') {
+    padding: 35px 0 40px;
+  }
   &__container {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    @include media('<phone') {
+      max-width: 260px;
+    }
   }
   &__row {
     width: 100%;
@@ -19,20 +25,21 @@
       margin: 60px 0 10px;
     }
     @include media('<phone') {
-      margin: 30px 0 0;
+      margin: 28px 0 0;
     }
   }
 }
 .manager-card {
+  width: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @include media('<tablet') {
-    margin: 0 20px 30px;
+    width: 40%;
+    margin: 0 10px 32px;
   }
   @include media('<phone') {
     width: 110px;
-    margin: 0 10px 30px;
   }
   &__photo-holder {
     width: 180px;

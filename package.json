@@ -62,8 +62,8 @@
   "dependencies": {
     "include-media": "^1.4.9",
     "jquery": "^3.3.1",
-    "jquery-parallax.js": "^1.5.0",
     "normalize.css": "^5.0.0",
+    "scroll-parallax": "^3.0.3",
     "swiper": "^5.0.4"
   }
 }

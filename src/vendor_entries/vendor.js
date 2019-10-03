@@ -5,4 +5,5 @@
 module.exports = [
   './node_modules/jquery/dist/jquery.js',
   './node_modules/swiper/js/swiper.min.js',
+  './node_modules/scroll-parallax/dist/Parallax.min.js'
 ];
