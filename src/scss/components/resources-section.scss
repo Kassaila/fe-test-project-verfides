@@ -1,7 +1,7 @@
 .resources-section {
-  padding: 72px 0;
+  padding: 72px 0 54px;
   @include media('<phone') {
-    padding: 35px 0;
+    padding: 35px 0 41px;
   }
   &__container {
     max-width: 1000px;

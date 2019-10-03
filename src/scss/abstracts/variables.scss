@@ -36,10 +36,10 @@ $base: (
 // Vars for forms
 $forms: (
   'form-font-family': unquote("Open Sans, 'Helvetica Neue', Helvetica, sans-serif"),
-  'form-element-padding': unquote('0.4em 0.7em'),
-  'form-element-border-color': #999,
-  'form-element-focus-border-color': #000,
-  'placeholder-color': rgba(#fff, 0.25),
+  'form-element-padding': unquote('16px 15px'),
+  'form-element-border-color': transparent,
+  'form-element-focus-border-color': #fff,
+  'placeholder-color': rgba(#fff, 0.5),
 );
 
 // Breakpoints for include media mixin
