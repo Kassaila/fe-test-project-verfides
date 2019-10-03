@@ -7,6 +7,7 @@ import navMobile from './modules/nav-mobile';
 import bgVideoControl from './modules/bg-video-control';
 import navScroll from './modules/nav-scroll';
 import servicesSlider from './modules/services-slider';
+import pictureParallax from './modules/picture-parallax';
 
 (($) => {
   // When DOM is ready
@@ -15,6 +16,6 @@ import servicesSlider from './modules/services-slider';
     bgVideoControl.init();
     navScroll.scrollTo();
     servicesSlider.init();
-    $('.picture-section').offset().top;
+    pictureParallax.init();
   });
 })(jQuery);
