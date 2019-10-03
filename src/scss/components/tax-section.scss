@@ -3,7 +3,7 @@
   background-color: map-get($colors, 'blue');
   padding: 72px 0 78px;
   @include media('<phone') {
-    padding: 36px 0;
+    padding: 35px 0;
   }
 
   &__container {
@@ -14,6 +14,9 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
+    @include media('<phone') {
+      max-width: 292px;
+    }
   }
   &__background {
     position: absolute;

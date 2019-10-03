@@ -10,7 +10,7 @@
     align-items: center;
     margin: 0 auto;
     @include media('<phone') {
-      max-width: 260px;
+      max-width: 262px;
     }
   }
   &__row {

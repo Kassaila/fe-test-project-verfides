@@ -2,7 +2,7 @@
   border-bottom: 1px solid #a5a5a5;
   padding: 70px 0 95px;
   @include media('<phone') {
-    padding: 35px 0;
+    padding: 32px 0 16px;
   }
 
   &__container {
@@ -12,6 +12,9 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
+    @include media('<phone') {
+      max-width: 292px;
+    }
   }
   &__sub-title {
     max-width: 660px;
