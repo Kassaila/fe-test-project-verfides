@@ -1,5 +1,3 @@
-import Swiper from 'swiper';
-
 const servicesSlider = () => {
   const init = () => {
     const $win = $(window);

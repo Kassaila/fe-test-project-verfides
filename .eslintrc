@@ -1,7 +1,9 @@
 {
   "globals": {
     "jQuery": true,
-    "$": true
+    "$": true,
+    "Swiper": true,
+    "Parallax": true
   },
   "env": {
     "browser": true,

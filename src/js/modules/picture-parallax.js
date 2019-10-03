@@ -1,5 +1,3 @@
-import Parallax from 'scroll-parallax';
-
 const pictureParallax = () => {
   const PICTURE_CLASS = '.picture-section__image-parallax';
 
