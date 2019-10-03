@@ -1,7 +1,7 @@
 .management-section {
   padding: 70px 0 80px;
   @include media('<phone') {
-    padding: 35px 0 40px;
+    padding: 35px 0 35px;
   }
   &__container {
     max-width: 1000px;

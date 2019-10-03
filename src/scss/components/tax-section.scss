@@ -1,0 +1,46 @@
+.tax-section {
+  position: relative;
+  background-color: map-get($colors, 'blue');
+  padding: 72px 0 78px;
+  @include media('<phone') {
+    padding: 36px 0;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    opacity: 0.05;
+    transform: translateX(-50%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .tax-section__text {
+    font: 400 18px map-get($base, 'base-font-family');
+    color: map-get($colors, 'white');
+    text-align: center;
+    margin: 26px 0 32px;
+    @include media('<phone') {
+      font-size: 14px;
+      margin: 12px 0 14px;
+    }
+  }
+  .section-title {
+    color: map-get($colors, 'white');
+  }
+}

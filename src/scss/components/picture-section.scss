@@ -2,7 +2,9 @@
   overflow: hidden;
   position: relative;
   height: 300px;
-
+  @include media('<phone') {
+    height: 150px;
+  }
   &__image-parallax {
     position: absolute;
     width: 100%;
