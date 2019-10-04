@@ -11,6 +11,10 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
+    @include media('<phone') {
+      max-width: 292px;
+      flex-direction: column;
+    }
   }
   &__text {
     font: 18px map-get($base, 'base-font-family');

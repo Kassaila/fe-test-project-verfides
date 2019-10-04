@@ -14,3 +14,5 @@ Develop
 * Task #22843776: Resources section @ds
 * Task #22843777: Form news section @ds
 * Task #22843792: Contacts section @ds
+* Task #22843795: Form questions section @ds
+* Task #22843805: Supervisory section @ds
