@@ -1,5 +1,5 @@
 .supervisory-section {
-  padding: 90px 0;
+  padding: 90px 0 95px;
   @include media('<phone') {
     padding: 45px 0;
   }
@@ -36,6 +36,8 @@
     }
     @include media('<tablet') {
       width: 100%;
+    }
+    @include media('<phone') {
       font-size: 12px;
     }
   }

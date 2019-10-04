@@ -16,3 +16,5 @@ Develop
 * Task #22843792: Contacts section @ds
 * Task #22843795: Form questions section @ds
 * Task #22843805: Supervisory section @ds
+* Task #22843807: Valute section @ds
+* Task #22843810: Footer @ds
