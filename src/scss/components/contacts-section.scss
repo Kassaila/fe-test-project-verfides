@@ -1,6 +1,6 @@
 .contacts-section {
   padding: 72px 0;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 35px 0;
   }
   &__container {
@@ -10,8 +10,8 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__text {
@@ -19,9 +19,9 @@
     font: 18px/1.25 map-get($base, 'base-font-family');
     text-align: center;
     margin: 35px 0 58px;
-    @include media('<phone') {
+    @include media('<tablet') {
       font-size: 14px;
-      margin: 16px 0;
+      margin: 26px 0;
     }
   }
   &__row {

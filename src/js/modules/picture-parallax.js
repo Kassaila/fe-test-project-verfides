@@ -1,8 +1,10 @@
 const pictureParallax = () => {
   const init = () => {
-    $('.picture-section').jarallax({
-      speed: 0.4,
-    });
+    if (typeof window.ontouchstart === 'undefined') {
+      $('.parallax-section').jarallax({
+        speed: 0.4,
+      });
+    }
   };
 
   return {

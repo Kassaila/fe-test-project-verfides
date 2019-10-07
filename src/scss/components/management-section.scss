@@ -1,6 +1,6 @@
 .management-section {
   padding: 70px 0 80px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 35px 0 35px;
   }
   &__container {
@@ -8,9 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 262px;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__row {
@@ -21,16 +22,12 @@
     justify-content: space-around;
     margin: 60px 0 40px;
     @include media('<tablet') {
-      justify-content: center;
-      margin: 60px 0 10px;
-    }
-    @include media('<phone') {
-      margin: 28px 0 0;
+      margin: 28px 0 10px;
     }
   }
 }
 .manager-card {
-  width: 190px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +36,7 @@
     margin: 0 10px 32px;
   }
   @include media('<phone') {
-    width: 110px;
+    width: 120px;
   }
   &__photo-holder {
     width: 180px;
@@ -47,9 +44,9 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 0 21px;
-    @include media('<phone') {
-      width: 90px;
-      height: 90px;
+    @include media('<tablet') {
+      width: 120px;
+      height: 120px;
       margin: 0 0 7px;
     }
     img {
@@ -63,7 +60,7 @@
     font: 18px/1.2 map-get($base, 'base-font-family');
     text-align: center;
     margin: 0;
-    @include media('<phone') {
+    @include media('<tablet') {
       font-size: 14px;
     }
   }

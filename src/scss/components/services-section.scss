@@ -1,21 +1,20 @@
 .services-section {
   padding: 90px 0 65px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 15px 0 22px;
   }
   &__container {
-    max-width: 1000px;
+    max-width: 1001px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
-      padding: 15px;
+    @include media('<tablet') {
+      padding: 30px;
       margin: 0 auto;
     }
   }
   &__slider {
     padding: 0 70px;
     margin: 65px 0 0;
-    @include media('<phone') {
+    @include media('<tablet') {
       padding: 0;
       margin: 18px 0 0;
     }
@@ -27,7 +26,7 @@
       width: 73px;
       height: 100%;
       z-index: 2;
-      @include media('<phone') {
+      @include media('<tablet') {
         display: none;
       }
     }
@@ -40,7 +39,7 @@
       background: linear-gradient(90deg, transparent 0%, #fff 100%);
     }
     .swiper-wrapper {
-      @include media('<phone') {
+      @include media('<tablet') {
         flex-direction: column;
       }
     }
@@ -48,11 +47,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include media('<phone') {
+      @include media('<tablet') {
         flex-direction: row;
       }
       &:not(:last-child) {
-        @include media('<phone') {
+        @include media('<tablet') {
           flex-direction: row;
           border-bottom: 1px solid #d7d7d7;
           padding: 0 0 10px;
@@ -68,7 +67,7 @@
         justify-content: center;
         border-radius: 50%;
         margin: 0 0 20px;
-        @include media('<phone') {
+        @include media('<tablet') {
           min-width: 55px;
           width: 55px;
           height: 55px;
@@ -91,7 +90,7 @@
         max-width: 100%;
         font: 18px/1.2 map-get($base, 'base-font-family');
         text-align: center;
-        @include media('<phone') {
+        @include media('<tablet') {
           font-size: 14px;
           text-align: left;
         }
@@ -123,12 +122,12 @@
         border-color: map-get($colors, 'grey');
         z-index: -1;
       }
-      @include media('<phone') {
+      @include media('<tablet') {
         display: none;
       }
     }
     .swiper-btn_prev {
-      left: 10px;
+      left: 25px;
       transform: translateY(-50%) rotateY(180deg);
       &:after {
         border-width: 0 0 1px 1px;
@@ -136,7 +135,7 @@
       }
     }
     .swiper-btn_next {
-      right: 10px;
+      right: 25px;
       transform: translateY(-50%);
       &:after {
         border-width: 0 0 1px 1px;

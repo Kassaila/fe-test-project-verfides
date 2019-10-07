@@ -3,7 +3,7 @@
   position: relative;
   background-color: map-get($colors, 'blue');
   padding: 72px 0 78px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 35px 0;
   }
 
@@ -15,8 +15,8 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__background {
@@ -38,12 +38,12 @@
       font-family: 'object-fit: cover;';
     }
   }
-  .tax-section__text {
+  &__text {
     font: 400 18px map-get($base, 'base-font-family');
     color: map-get($colors, 'white');
     text-align: center;
     margin: 26px 0 32px;
-    @include media('<phone') {
+    @include media('<tablet') {
       font-size: 14px;
       margin: 12px 0 14px;
     }

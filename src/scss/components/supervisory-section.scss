@@ -1,6 +1,6 @@
 .supervisory-section {
   padding: 90px 0 95px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 45px 0;
   }
   &__container {
@@ -10,34 +10,19 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__block {
     width: 100%;
-    display: flex;
-    align-items: flex-start;
+    column-count: 3;
+    column-gap: 30px;
     margin: 35px 0 0;
-    @include media('<tablet') {
-      flex-wrap: wrap;
-    }
-  }
-  &__text {
-    width: 300px;
-    &:not(:last-child) {
-      margin-right: 33px;
-      @include media('<widescreen') {
-        margin-right: 20px;
-      }
-      @include media('<tablet') {
-        margin: 0 0 20px;
-      }
+    @include media('<desktop') {
+      column-count: 1;
     }
     @include media('<tablet') {
-      width: 100%;
-    }
-    @include media('<phone') {
       font-size: 12px;
     }
   }

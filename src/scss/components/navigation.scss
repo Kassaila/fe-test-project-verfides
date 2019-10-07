@@ -2,7 +2,6 @@
   margin-left: auto;
   @include media('<desktop') {
     background-color: map-get($colors, 'white');
-    padding: 23px 48px;
     margin-left: 0;
   }
 
@@ -60,26 +59,28 @@
       @include animate(transform);
       content: '';
       position: absolute;
-      left: 0;
-      width: 100%;
+      left: 50%;
+      width: 52px;
       height: 2px;
       background-color: #444;
       border-radius: 1px;
       transform-origin: 0;
+      transform: translateX(-50%);
     }
     &:before {
-      top: 0;
+      top: 18px;
     }
     &:after {
-      bottom: 0;
+      bottom: 18px;
     }
     @include media('<desktop') {
       position: relative;
-      width: 25px;
-      height: 12px;
+      width: 120px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 18px 34px;
     }
 
     span {
@@ -91,13 +92,15 @@
     }
     &_active {
       &:before {
-        transform: rotateZ(24deg);
+        top: 17px;
+        transform: translateX(-50%) rotateZ(27deg);
       }
       span {
         opacity: 0;
       }
       &:after {
-        transform: rotateZ(-24deg);
+        bottom: 17px;
+        transform: translateX(-50%) rotateZ(-27deg);
       }
     }
   }

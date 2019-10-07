@@ -12,7 +12,7 @@
   &:focus {
     text-decoration: none;
   }
-  @include media('<phone') {
+  @include media('<tablet') {
     min-width: 142px;
     font-size: 12px;
   }

@@ -1,7 +1,7 @@
 .form-news-section {
   background-color: map-get($colors, 'blue');
   padding: 76px 0 83px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 36px 0 39px;
   }
   &__container {
@@ -11,8 +11,8 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__form {
@@ -20,9 +20,11 @@
     display: flex;
     justify-content: center;
     margin: 0 0 43px;
+    @include media('<tablet') {
+      margin: 0 0 21px;
+    }
     @include media('<phone') {
       flex-wrap: wrap;
-      margin: 0 0 21px;
     }
   }
   &__text {
@@ -30,7 +32,7 @@
     color: map-get($colors, 'white');
     text-align: center;
     margin: 0 0 39px;
-    @include media('<phone') {
+    @include media('<tablet') {
       font-size: 14px;
       margin: 0 0 16px;
     }

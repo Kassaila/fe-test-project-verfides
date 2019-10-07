@@ -17,10 +17,6 @@ const servicesSlider = () => {
           prevEl: '.swiper-btn_prev',
         },
         breakpoints: {
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
           768: {
             slidesPerView: 4,
             spaceBetween: 10,
@@ -37,12 +33,12 @@ const servicesSlider = () => {
       state = 'destroy';
     };
 
-    if ($win.width() > 480) _sliderInit();
+    if ($win.width() > 767) _sliderInit();
 
     $win.on('resize', () => {
-      if ($win.width() <= 480 && state !== 'destroy') {
+      if ($win.width() <= 767 && state !== 'destroy') {
         _sliderDestroy();
-      } else if ($win.width() > 480 && state === 'destroy') {
+      } else if ($win.width() > 767 && state === 'destroy') {
         _sliderInit();
       }
     });

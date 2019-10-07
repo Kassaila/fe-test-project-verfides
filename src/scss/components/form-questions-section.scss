@@ -1,7 +1,7 @@
 .form-questions-section {
   background-color: map-get($colors, 'blue');
   padding: 70px 0 105px;
-  @include media('<phone') {
+  @include media('<tablet') {
     padding: 35px 0 50px;
   }
   &__container {
@@ -11,9 +11,8 @@
     align-items: center;
     padding: 0 15px;
     margin: 0 auto;
-    @include media('<phone') {
-      max-width: 292px;
-      flex-direction: column;
+    @include media('<tablet') {
+      padding: 0 30px;
     }
   }
   &__text {
@@ -21,7 +20,7 @@
     color: map-get($colors, 'white');
     text-align: center;
     margin: 35px 0 18px;
-    @include media('<phone') {
+    @include media('<tablet') {
       font-size: 14px;
       margin: 16px 0 12px;
     }
@@ -73,7 +72,7 @@
   }
   .btn {
     margin: 40px 0 0;
-    @include media('<phone') {
+    @include media('<tablet') {
       margin: 20px 0 0;
     }
   }
