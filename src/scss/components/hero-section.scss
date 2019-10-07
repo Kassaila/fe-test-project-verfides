@@ -23,6 +23,7 @@
       min-width: 100%;
       min-height: 100%;
       object-fit: cover;
+      font-family: 'object-fit: cover;';
       @include media('<tablet') {
         display: none;
       }
@@ -35,6 +36,7 @@
       min-width: 100%;
       min-height: 100%;
       object-fit: cover;
+      font-family: 'object-fit: cover;';
       z-index: -1;
     }
   }
@@ -110,6 +112,8 @@
       @include animate(transform, 0.5s, ease);
       content: '';
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background-color: transparent;

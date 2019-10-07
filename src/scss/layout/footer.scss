@@ -73,6 +73,7 @@
   }
   &__secondary-list {
     @extend %listreset;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

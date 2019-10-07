@@ -88,6 +88,7 @@
         }
       }
       &__text {
+        max-width: 100%;
         font: 18px/1.2 map-get($base, 'base-font-family');
         text-align: center;
         @include media('<phone') {
@@ -113,6 +114,8 @@
         @include animate(box-shadow);
         content: '';
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         background-color: map-get($colors, 'white');

@@ -37,6 +37,7 @@
   }
 }
 .resources-articles {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin: 50px 0 35px;
@@ -65,6 +66,7 @@
     }
   }
   &__title {
+    max-width: 100%;
     font: 18px map-get($base, 'base-font-family');
     color: map-get($colors, 'blue');
     margin: 0 0 3px;
@@ -73,6 +75,7 @@
     }
   }
   &__text {
+    max-width: 100%;
     margin: 0 0 10px;
     @include media('<phone') {
       font: 12px/1.25 map-get($base, 'base-font-family');
@@ -126,6 +129,7 @@
     img {
       width: 166px;
       object-fit: cover;
+      font-family: 'object-fit: cover;';
       @include media('<tablet') {
         width: 83px;
       }

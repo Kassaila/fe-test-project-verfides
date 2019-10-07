@@ -2,7 +2,8 @@
   "globals": {
     "jQuery": true,
     "$": true,
-    "Swiper": true
+    "Swiper": true,
+    "objectFitImages": true
   },
   "env": {
     "browser": true,

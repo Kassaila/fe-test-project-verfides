@@ -10,6 +10,7 @@ import servicesSlider from './modules/services-slider';
 import pictureParallax from './modules/picture-parallax';
 
 (($) => {
+  objectFitImages();
   // When DOM is ready
   $(() => {
     navMobile.init();
