@@ -1,6 +1,8 @@
 .btn {
   @include animate(background color);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 170px;
   font-weight: 700;
   text-align: center;

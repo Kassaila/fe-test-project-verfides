@@ -67,9 +67,6 @@
       width: 100%;
     }
   }
-  .section-title {
-    color: map-get($colors, 'white');
-  }
   .btn {
     margin: 40px 0 0;
     @include media('<tablet') {

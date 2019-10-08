@@ -1,5 +1,5 @@
 .resources-section {
-  padding: 72px 0 54px;
+  padding: 72px 0 34px;
   @include media('<tablet') {
     padding: 35px 0 41px;
   }
@@ -40,7 +40,7 @@
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 50px 0 35px;
+  margin: 50px 0 15px;
   @include media('<tablet') {
     flex-direction: column;
     margin: 20px 0;
@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 20px;
     &:nth-child(odd) {
       margin-right: 20px;
       @include media('<tablet') {
@@ -83,18 +84,14 @@
     }
   }
   &__link {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     padding-right: 20px;
     @include media('<tablet') {
       font-size: 12px;
       padding-right: 15px;
-    }
-    .icon-arrow {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
     }
   }
 }
@@ -110,13 +107,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
     &:not(:last-child) {
       margin-right: 55px;
       @include media('<tablet') {
         margin-right: 25px;
       }
-      @include media('<tablet') {
-        margin: 0 0 20px;
+      @include media('<phone') {
+        margin-right: 0;
       }
     }
 
@@ -145,20 +143,15 @@
     }
   }
   &__link {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
-    padding-right: 20px;
     margin: 6px 0 0;
     @include media('<tablet') {
       font-size: 12px;
       padding-right: 15px;
       margin: 0;
-    }
-    .icon-arrow {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%) rotateZ(90deg);
     }
   }
 }

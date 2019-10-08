@@ -87,9 +87,8 @@
     align-items: center;
     padding: 0 15px;
   }
-  .section-title {
+  &__section-title {
     max-width: 500px;
-    color: map-get($colors, 'white');
     margin: auto 0;
     &:after {
       background-color: map-get($colors, 'white');
@@ -103,6 +102,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
+    color: map-get($colors, 'white');
     background-color: transparent;
     margin: 0 0 80px;
     &:hover:before {
@@ -119,19 +120,14 @@
       background-color: transparent;
       border: 1px solid map-get($colors, 'white');
     }
-    @include media('<phone') {
+    @include media('<tablet') {
       width: 38px;
       height: 38px;
+      font-size: 24px;
       margin: 0 0 40px;
     }
-
-    .icon-arrow-long {
-      font-size: 30px;
-      color: map-get($colors, 'white');
-      transform: rotateZ(90deg);
-      @include media('<phone') {
-        font-size: 24px;
-      }
-    }
+  }
+  &__btn-arrow {
+    transform: rotateZ(90deg);
   }
 }

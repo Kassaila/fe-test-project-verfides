@@ -1,7 +1,7 @@
 .contacts-section {
-  padding: 72px 0;
+  padding: 72px 0 32px;
   @include media('<tablet') {
-    padding: 35px 0;
+    padding: 35px 0 0;
   }
   &__container {
     max-width: 1000px;
@@ -43,23 +43,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  &:nth-child(even) {
-    margin: 0 95px;
-    @include media('<desktop') {
-      margin: 0;
-    }
-    @include media('<tablet') {
-      margin: 0 0 38px;
-    }
-  }
-  &:last-child {
-    @include media('<phone') {
-      margin: 0;
-    }
-  }
+  margin: 0 45px 40px;
   @include media('<tablet') {
     width: 200px;
-    margin: 0 0 40px;
+    margin: 0 10px 40px;
   }
 
   &__map {

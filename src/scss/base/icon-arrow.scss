@@ -6,7 +6,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icon-arrow' !important;
   speak: none;
@@ -22,8 +23,16 @@
 }
 
 .icon-arrow-long:before {
-  content: "\e900";
+  content: '\e900';
 }
-.icon-arrow:before {
-  content: "\e901";
+.icon-arrow {
+  &:before {
+    content: '\e901';
+  }
+  &_btn {
+    margin-left: 5px;
+  }
+  &_down {
+    transform: rotateZ(90deg);
+  }
 }
