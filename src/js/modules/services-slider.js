@@ -5,7 +5,7 @@ const servicesSlider = () => {
     let state = 'destroy';
 
     const _sliderInit = () => {
-      slider = new Swiper('.swiper-container', {
+      slider = new Swiper('.services-slider', {
         // Optional parameters
         init: false,
         direction: 'horizontal',
@@ -13,8 +13,8 @@ const servicesSlider = () => {
         loop: false,
         autoHeight: true,
         navigation: {
-          nextEl: '.swiper-btn_next',
-          prevEl: '.swiper-btn_prev',
+          nextEl: '.services-slider__btn_next',
+          prevEl: '.services-slider__btn_prev',
         },
         breakpoints: {
           768: {

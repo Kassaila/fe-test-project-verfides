@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media('<widescreen') {
+    border-bottom: 2px solid map-get($colors, 'blue');
+  }
   &__widget {
-    width: 100%;
-    max-width: 1300px;
-    height: 60px;
-    background: url(../images/valute-1.png) center / cover no-repeat;
+    max-width: 100%;
+    @include media('<widescreen') {
+      display: none;
+    }
   }
 }
