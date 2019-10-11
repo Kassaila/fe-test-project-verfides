@@ -1,0 +1,39 @@
+.btn {
+  @include animate(background color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  font-weight: 700;
+  text-align: center;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  padding: 14px 15px;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  @include media('<tablet') {
+    min-width: 142px;
+    font-size: 12px;
+  }
+  &_white {
+    color: map-get($colors, 'white');
+    border-color: map-get($colors, 'white');
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'blue');
+      background-color: map-get($colors, 'white');
+    }
+  }
+  &_blue {
+    color: map-get($colors, 'blue');
+    border-color: map-get($colors, 'blue');
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'white');
+      background-color: map-get($colors, 'blue');
+    }
+  }
+}

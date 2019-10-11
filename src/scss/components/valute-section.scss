@@ -1,0 +1,14 @@
+.valute-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media('<widescreen') {
+    border-bottom: 2px solid map-get($colors, 'blue');
+  }
+  &__widget {
+    max-width: 100%;
+    @include media('<widescreen') {
+      display: none;
+    }
+  }
+}

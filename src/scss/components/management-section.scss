@@ -1,0 +1,92 @@
+.management-section {
+  padding: 70px 0 80px;
+  @include media('<tablet') {
+    padding: 35px 0 35px;
+  }
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 0 30px;
+    }
+  }
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 60px 0 20px;
+    @include media('<tablet') {
+      margin: 28px 0 10px;
+    }
+  }
+}
+.manager-card {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px;
+  @include media('<tablet') {
+    width: 40%;
+    margin: 0 10px 32px;
+  }
+  @include media('<phone') {
+    width: 120px;
+  }
+  &__photo-holder {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 0 21px;
+    @include media('<tablet') {
+      width: 120px;
+      height: 120px;
+      margin: 0 0 7px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+  &__name {
+    font: 18px/1.2 map-get($base, 'base-font-family');
+    text-align: center;
+    margin: 0;
+    @include media('<tablet') {
+      font-size: 14px;
+    }
+  }
+  &__position {
+    font: 14px/1.2 map-get($base, 'base-font-family');
+    text-align: center;
+    margin: 0 0 5px;
+    @include media('<phone') {
+      font-size: 12px;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    @include animate(opacity);
+    display: flex;
+    font-weight: 700;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+}

@@ -3,5 +3,8 @@
 // Note: ES6 support for these imports is not supported in base build
 
 module.exports = [
-  './node_modules/jquery/dist/jquery.js'
+  './node_modules/jquery/dist/jquery.js',
+  './node_modules/swiper/js/swiper.min.js',
+  './node_modules/jarallax/dist/jarallax.min.js',
+  './node_modules/object-fit-images/dist/ofi.min.js'
 ];

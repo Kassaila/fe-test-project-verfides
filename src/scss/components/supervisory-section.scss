@@ -1,0 +1,29 @@
+.supervisory-section {
+  padding: 90px 0 95px;
+  @include media('<tablet') {
+    padding: 45px 0;
+  }
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 0 30px;
+    }
+  }
+  &__block {
+    width: 100%;
+    column-count: 3;
+    column-gap: 30px;
+    margin: 35px 0 0;
+    @include media('<desktop') {
+      column-count: 1;
+    }
+    @include media('<tablet') {
+      font-size: 12px;
+    }
+  }
+}

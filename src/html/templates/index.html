@@ -4,12 +4,21 @@
 @@include('../partials/head/head.html')
 
 <body>
-  <div id="wrapper">
-    @@include('../partials/components/entry-section.html')
-    @@include('../partials/components/starter-box.html', {
-    "title": "JustCoded",
-    "intro-text": "Web Starter Kit"
-    })
+  <div class="main-container">
+    @@include('../partials/layout/header.html')
+    @@include('../partials/components/hero-section.html')
+    @@include('../partials/components/welcome-section.html')
+    @@include('../partials/components/services-section.html')
+    @@include('../partials/components/parallax-section.html')
+    @@include('../partials/components/management-section.html')
+    @@include('../partials/components/tax-section.html')
+    @@include('../partials/components/resources-section.html')
+    @@include('../partials/components/form-news-section.html')
+    @@include('../partials/components/contacts-section.html')
+    @@include('../partials/components/form-questions-section.html')
+    @@include('../partials/components/supervisory-section.html')
+    @@include('../partials/components/valute-section.html')
+    @@include('../partials/layout/footer.html')
   </div>
 
   <script src="assets/js/vendor.min.js" defer></script>

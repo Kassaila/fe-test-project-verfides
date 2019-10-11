@@ -1,0 +1,30 @@
+.parallax-section {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  margin: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.5);
+  }
+  @include media('<phone') {
+    height: 150px;
+  }
+  .jarallax-img {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+      z-index: -1;
+    }
+  }
+}

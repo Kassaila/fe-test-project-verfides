@@ -1,0 +1,126 @@
+.contacts-section {
+  padding: 72px 0 32px;
+  @include media('<tablet') {
+    padding: 35px 0 0;
+  }
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 0 30px;
+    }
+  }
+  &__text {
+    max-width: 800px;
+    font: 18px/1.25 map-get($base, 'base-font-family');
+    text-align: center;
+    margin: 35px 0 58px;
+    @include media('<tablet') {
+      font-size: 14px;
+      margin: 26px 0;
+    }
+  }
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    @include media('<desktop') {
+      justify-content: space-around;
+    }
+    @include media('<phone') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 45px 40px;
+  @include media('<tablet') {
+    width: 200px;
+    margin: 0 10px 40px;
+  }
+
+  &__map {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 50%;
+    margin: 0 0 28px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(map-get($colors, 'blue'), 0.6);
+    }
+    @include media('<tablet') {
+      width: 110px;
+      height: 110px;
+      margin: 0 0 16px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+  &__title {
+    position: relative;
+    font: 18px map-get($base, 'base-font-family');
+    text-align: center;
+    padding: 0 0 10px;
+    margin: 0 0 22px;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 12px;
+      height: 2px;
+      background-color: map-get($colors, 'blue');
+      transform: translateX(-50%);
+      @include media('<tablet') {
+        height: 1px;
+      }
+    }
+    @include media('<tablet') {
+      font-size: 14px;
+      padding: 0 0 5px;
+      margin: 0 0 15px;
+    }
+  }
+  &__address {
+    font: 14px/1.43 map-get($base, 'base-font-family');
+    text-align: center;
+    margin: 0 0 19px;
+    @include media('<tablet') {
+      font: 12px/1.25 map-get($base, 'base-font-family');
+      margin: 0 0 15px;
+    }
+  }
+  &__requisites {
+    @extend %listreset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto 0 0;
+    @include media('<tablet') {
+      font: 12px/1.25 map-get($base, 'base-font-family');
+    }
+  }
+}

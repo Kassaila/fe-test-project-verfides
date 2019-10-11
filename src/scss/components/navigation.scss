@@ -1,0 +1,107 @@
+.nav {
+  margin-left: auto;
+  @include media('<desktop') {
+    background-color: map-get($colors, 'white');
+    margin-left: 0;
+  }
+
+  &__list {
+    @extend %listreset;
+    display: flex;
+    @include media('<desktop') {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      display: none;
+      background-color: #043355;
+      padding: 10px 0;
+    }
+    li {
+      margin-left: 47px;
+      @include media('<widescreen') {
+        margin-left: 20px;
+      }
+      @include media('<desktop') {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link {
+    @include animate(border opacity);
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: map-get($colors, 'white');
+    border-bottom: 1px solid transparent;
+    padding: 6px 0 10px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-color: map-get($colors, 'white');
+      opacity: 0.8;
+    }
+    @include media('<desktop') {
+      text-align: center;
+    }
+
+    &_current {
+      border-color: map-get($colors, 'white');
+    }
+  }
+
+  &__btn-mobile {
+    @extend %btnreset;
+    display: none;
+    &:before,
+    &:after {
+      @include animate(transform);
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 52px;
+      height: 2px;
+      background-color: #444;
+      border-radius: 1px;
+      transform-origin: 0;
+      transform: translateX(-50%);
+    }
+    &:before {
+      top: 18px;
+    }
+    &:after {
+      bottom: 18px;
+    }
+    @include media('<desktop') {
+      position: relative;
+      width: 120px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 34px;
+    }
+
+    span {
+      @include animate(transform);
+      width: 100%;
+      height: 2px;
+      background-color: #444;
+      border-radius: 1px;
+    }
+    &_active {
+      &:before {
+        top: 17px;
+        transform: translateX(-50%) rotateZ(27deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &:after {
+        bottom: 17px;
+        transform: translateX(-50%) rotateZ(-27deg);
+      }
+    }
+  }
+}

@@ -7,8 +7,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6,
-.h {
+h6, .h6 {
   font-family: map-deep-get($headings, 'fonts', 'headings-font-family');
   font-weight: bold;
   margin: 0 0 0.5em;
@@ -45,8 +44,9 @@ p {
 
 a {
   color: map-get($base, 'base-link-color');
+  text-decoration: none;
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }

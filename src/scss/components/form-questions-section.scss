@@ -1,0 +1,76 @@
+.form-questions-section {
+  background-color: map-get($colors, 'blue');
+  padding: 70px 0 105px;
+  @include media('<tablet') {
+    padding: 35px 0 50px;
+  }
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 0 30px;
+    }
+  }
+  &__text {
+    font: 18px map-get($base, 'base-font-family');
+    color: map-get($colors, 'white');
+    text-align: center;
+    margin: 35px 0 18px;
+    @include media('<tablet') {
+      font-size: 14px;
+      margin: 16px 0 12px;
+    }
+  }
+  &__form {
+    width: 100%;
+    max-width: 735px;
+    display: flex;
+    flex-wrap: wrap;
+    @include media('<tablet') {
+      max-width: 535px;
+      flex-direction: column;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    @include media('<tablet') {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+  &__note {
+    width: 100%;
+    font-weight: 700;
+    color: map-get($forms, 'placeholder-color');
+    margin: 0 0 8px 8px;
+  }
+  &__input {
+    width: 353px;
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+  &__textarea {
+    position: relative;
+    width: 353px;
+    min-height: 150px;
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+  .btn {
+    margin: 40px 0 0;
+    @include media('<tablet') {
+      margin: 20px 0 0;
+    }
+  }
+}

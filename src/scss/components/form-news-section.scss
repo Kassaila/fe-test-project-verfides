@@ -1,0 +1,52 @@
+.form-news-section {
+  background-color: map-get($colors, 'blue');
+  padding: 76px 0 83px;
+  @include media('<tablet') {
+    padding: 36px 0 39px;
+  }
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 0 30px;
+    }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 43px;
+    @include media('<tablet') {
+      margin: 0 0 21px;
+    }
+    @include media('<phone') {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    font: 18px/1.25 map-get($base, 'base-font-family');
+    color: map-get($colors, 'white');
+    text-align: center;
+    margin: 0 0 39px;
+    @include media('<tablet') {
+      font-size: 14px;
+      margin: 0 0 16px;
+    }
+  }
+  &__input {
+    width: 353px;
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include media('<phone') {
+        margin: 0 0 20px;
+      }
+    }
+    @include media('<phone') {
+      width: 100%;
+    }
+  }
+}

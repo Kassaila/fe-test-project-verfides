@@ -1,0 +1,145 @@
+.services-section {
+  padding: 90px 0 65px;
+  @include media('<tablet') {
+    padding: 15px 0 22px;
+  }
+  &__container {
+    max-width: 1001px;
+    margin: 0 auto;
+    @include media('<tablet') {
+      padding: 30px;
+      margin: 0 auto;
+    }
+  }
+}
+.services-slider {
+  padding: 0 70px;
+  margin: 65px 0 0;
+  @include media('<tablet') {
+    padding: 0;
+    margin: 18px 0 0;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 73px;
+    height: 100%;
+    z-index: 2;
+    @include media('<tablet') {
+      display: none;
+    }
+  }
+  &:before {
+    left: -1px;
+    background: linear-gradient(90deg, #fff 0%, transparent 100%);
+  }
+  &:after {
+    right: -1px;
+    background: linear-gradient(90deg, transparent 0%, #fff 100%);
+  }
+  &__wraper {
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media('<tablet') {
+      flex-direction: row;
+    }
+    &:not(:last-child) {
+      @include media('<tablet') {
+        flex-direction: row;
+        border-bottom: 1px solid #d7d7d7;
+        padding: 0 0 10px;
+        margin: 0 0 10px;
+      }
+    }
+  }
+  &__icon-holder {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 20px;
+    @include media('<tablet') {
+      min-width: 55px;
+      width: 55px;
+      height: 55px;
+      margin: 0 10px 0 0;
+    }
+
+    @each $key, $value in $bg-colors {
+      &_#{$key} {
+        background-color: $value;
+      }
+    }
+
+    &_three img {
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
+  }
+  &__text {
+    max-width: 100%;
+    font: 18px/1.2 map-get($base, 'base-font-family');
+    text-align: center;
+    @include media('<tablet') {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 65px;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    cursor: pointer;
+    &:hover:after {
+      box-shadow: 3px -3px 5px 1px rgba(#000, 0.2);
+    }
+    &:after {
+      @include animate(box-shadow);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: map-get($colors, 'white');
+      border-style: solid;
+      border-color: map-get($colors, 'grey');
+      z-index: -1;
+    }
+    @include media('<tablet') {
+      display: none;
+    }
+  }
+  &__btn_prev {
+    left: 25px;
+    transform: translateY(-50%) rotateY(180deg);
+    &:after {
+      border-width: 0 0 1px 1px;
+      transform: rotateZ(225deg);
+    }
+  }
+  &__btn_next {
+    right: 25px;
+    transform: translateY(-50%);
+    &:after {
+      border-width: 0 0 1px 1px;
+      transform: rotateZ(225deg);
+    }
+  }
+}

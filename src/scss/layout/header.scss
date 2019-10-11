@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 60px 30px 40px;
+  z-index: 10;
+  @include media('<widescreen') {
+    padding: 30px 15px;
+  }
+  @include media('<desktop') {
+    background-color: #043355;
+    padding: 0;
+  }
+  &__logo {
+    width: 173px;
+    @include media('<desktop') {
+      width: 105px;
+      margin: 0 auto 0 40px;
+    }
+  }
+}

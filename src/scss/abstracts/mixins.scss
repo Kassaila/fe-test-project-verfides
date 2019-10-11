@@ -5,7 +5,7 @@
 
 /// Mixin helping with long string of the url
 /// https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
-/// Usage 
+/// Usage
 /// @include word-wrap;
 @mixin word-wrap() {
   overflow-wrap: break-word;
@@ -17,7 +17,7 @@
 }
 
 // Preventing Overflow with Ellipsis
-// Usage 
+// Usage
 // @include ellipsis;
 //
 @mixin ellipsis() {
@@ -27,7 +27,7 @@
 }
 
 // vertical align el inside parent with fixed height/min-height
-// usage 
+// usage
 // html - .parent>.child
 // scss - @include v-align;
 //     or @include v-align(250px);
@@ -54,7 +54,7 @@
 }
 
 // vertical align a pair of child el inside parent
-// usage 
+// usage
 // html - .post>.image+.text
 // scss - @include v-align-pair(image, text);
 //     or @include v-align-pair(image, text, bottom);
@@ -65,7 +65,7 @@
   .#{$child-name1}{
     display: table-cell;
     vertical-align: $valign;
-    width: $width1; 
+    width: $width1;
   }
   .#{$child-name2} {
     display: table-cell;
@@ -156,15 +156,15 @@
 }
 
 
-/// Creates a visual triangle. 
+/// Creates a visual triangle.
 /// Mixin takes ($size, $color, $direction)
 /// The $size argument can take one or two values—width height.
-/// The $color argument can take one or two 
+/// The $color argument can take one or two
 /// values—foreground-color background-color.
-/// 
+///
 /// @author http://bourbon.io/docs/#triangle
 ///
-/// $direction: 
+/// $direction:
 /// up, down, left, right, up-right, up-left, down-right, down-left
 /// @example scss - Usage
 ///   @include triangle(12px, gray, down);
@@ -236,7 +236,7 @@
 
 
 /// Animate css properties
-// usage 
+// usage
 // scss - @include animate(color);
 //     or @include animate(color width);
 //     or @include animate(color width, 1s, linear);
@@ -244,7 +244,7 @@
 //
 $animation-speed: 0.3s !default;
 
-@mixin animate($properties, $duration: $animation-speed, $easing: ease-in-out, $delay: false) {
+@mixin animate($properties, $duration: $animation-speed, $easing: ease, $delay: false) {
   @if ($properties and $duration and $easing and $delay) {
     $list:();
     @each $prop in $properties {
