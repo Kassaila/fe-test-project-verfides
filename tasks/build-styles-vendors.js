@@ -15,7 +15,6 @@ module.exports = function (options) {
 
   return () => {
     return gulp.src(`./${options.src}/vendor_entries/${options.vendorScss}`)
-      .pipe(rename(options.vendorScssMin))
       .pipe(sass())
       .on('error', notify.onError({
         title: 'Sass compiling error',
@@ -23,6 +22,7 @@ module.exports = function (options) {
         wait: true
       }))
       .pipe(cssimport())
+      .pipe(rename(options.vendorScssMin))
       .pipe(gulpif(options.isProduction, cssnano({ safe: true })))
       .pipe(gulp.dest(`./${options.dest}/css`));
   };
