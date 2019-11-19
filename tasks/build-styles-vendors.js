@@ -16,13 +16,13 @@ module.exports = function (options) {
   return () => {
     return gulp.src(`./${options.src}/vendor_entries/${options.vendorScss}`)
       .pipe(rename(options.vendorScssMin))
-      .pipe(cssimport())
       .pipe(sass())
       .on('error', notify.onError({
         title: 'Sass compiling error',
         icon: './sys_icon/error_icon.png',
         wait: true
       }))
+      .pipe(cssimport())
       .pipe(gulpif(options.isProduction, cssnano({ safe: true })))
       .pipe(gulp.dest(`./${options.dest}/css`));
   };
